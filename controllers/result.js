@@ -6,7 +6,7 @@ export const postResult = async(req,res)=>{
 
     try{
         await ResultModal.create({usn,fname,lname,fatherName,motherName,department,branch,sem1,sem2,sem3,sem4,sem5,sem6,sem7,sem8});
-        res.sendStatus(201).json({ result, token });
+        res.send("created");
 
     }
     catch(error){
